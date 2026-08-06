@@ -4,7 +4,7 @@ Stack:
 ---
 NixOS · Niri (Wayland)/Gnome · Stylix · Fish · NVIDIA PRIME offload
 
-**About the repo**
+**About the Repo**
 ---
 This repo is the source (and public shame folder) for the exact NixOS 
 configuration and flakes I run as my daily driver. It's part changelog, 
@@ -21,7 +21,7 @@ hard for Linux; specifically Linux for development. My mentor suggested
 I try NixOS to actually learn deployment, DevOps, and declarative systems, 
 as I also have a passion for scripting.
 
-**About the system thus far**
+**About the System Thus Far**
 ---
 I've since fallen face-first into the Desktop Ricing rabbit hole. Right 
 now the system runs Niri as the Wayland compositor. I've included my full 
@@ -31,4 +31,3 @@ I'm at including: mistakes and structure I clearly meant to fix later.
 **Wallpaper for Stylix**
 ---
 ![My Wallpaper.png](/Ella.png)
-# NixosConfig
