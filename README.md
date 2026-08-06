@@ -30,6 +30,5 @@ I'm at including: mistakes and structure I clearly meant to fix later.
 
 **Wallpaper for Stylix**
 ---
-Made with Aseprite
 ![My Wallpaper.png](/Ella.png)
 # NixosConfig
