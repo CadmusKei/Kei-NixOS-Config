@@ -55,6 +55,12 @@
     };
   };
 
+  dconf.settings = {
+    "org/gnome/desktop/wm/keybindings" = {
+    toggle-fullscreen = [ "<Super>f" ];
+    };
+  };
+
   home.packages = [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.quickshell

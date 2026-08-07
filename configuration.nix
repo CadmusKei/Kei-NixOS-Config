@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
 
@@ -17,6 +17,7 @@
   programs.git.enable = true;
   programs.steam.enable = true;
   programs.gamemode.enable = true; 
+  virtualisation.virtualbox.host.enable = true;
 
   # === Packages === 
   environment.systemPackages = with pkgs; [
@@ -24,6 +25,7 @@
      # = Dev =
      vscode.fhs
      neovim
+     yazi
      arduino-ide
      tree-sitter
      nodejs
@@ -68,6 +70,10 @@
      fastfetch
      nwg-look
   ];
+  
+  environment.extraInit = ''
+    export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+  '';
 
   # === Services ===
 
