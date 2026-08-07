@@ -101,6 +101,9 @@
     extraGroups = [ "networkmanager" "wheel" "video" "dialout" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKrF+siRa7198mKVcgE/5+Da7rChaDkj116DjnEiWAy/ kei@Trisium"
+    ];
   };
 
   # = Passwordless sudo = 
