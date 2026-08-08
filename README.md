@@ -30,4 +30,4 @@ I'm at including: mistakes and structure I clearly meant to fix later.
 
 **Wallpaper for Stylix**
 ---
-![My Wallpaper.png](/Ella.png)
+![My Wallpaper.png](/Wallpaper.png)
