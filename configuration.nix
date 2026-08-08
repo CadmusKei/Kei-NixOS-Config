@@ -70,7 +70,8 @@
      fastfetch
      nwg-look
   ];
-  
+
+  # Dsecribes default GTK apps for some apps (Vbox) to open   
   environment.extraInit = ''
     export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
   '';
@@ -85,7 +86,6 @@
   services.udisks2.enable = true; 
   services.openssh.enable = true;
   
-
   # === Themeing === 
 
   services.xserver.enable = true;
@@ -156,12 +156,6 @@
   
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # === Network ===
 
@@ -202,15 +196,6 @@
     amdgpuBusId = "PCI:5:0:0";   
     nvidiaBusId = "PCI:1:0:0";   
   };
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
