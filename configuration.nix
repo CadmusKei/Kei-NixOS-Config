@@ -13,7 +13,7 @@
 
   programs.dconf.enable = true;
   programs.fish.enable = true;
-  # programs.xwayland.enable = true;  
+  programs.xwayland.enable = true;  
   programs.git.enable = true;
   programs.steam.enable = true;
   programs.gamemode.enable = true; 
@@ -36,7 +36,6 @@
      python3Packages.pip 
 
      # = Applications = 
-     firefox
      nautilus
      discord
      spotify-player
@@ -61,14 +60,21 @@
      zoxide
      tmux
      gpu-screen-recorder
+     xwayland-satellite
+     btop
+     tree
 
      # = Gaming = 
      protonup-qt   
      protontricks    
-     
+     gamemode                                                                                  │     unzip
+     prismlauncher     
+
      # = Theming = 
      fastfetch
      nwg-look
+     awww
+     noctalia-shell
   ];
 
   # Dsecribes default GTK apps for some apps (Vbox) to open   
