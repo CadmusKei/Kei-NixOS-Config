@@ -1,0 +1,4 @@
+set -g fish_color_user cc99ff
+set -g fish_color_host cc99ff
+set -g fish_color_host_separator ffffff
+zoxide init fish | source

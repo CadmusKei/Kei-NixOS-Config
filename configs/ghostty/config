@@ -1,0 +1,8 @@
+
+
+theme = Gruvbox Dark Hard 
+window-decoration = false
+background-opacity = 0.8
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true

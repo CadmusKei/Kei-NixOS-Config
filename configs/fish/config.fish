@@ -1,0 +1,1 @@
+/nix/store/x1cks0lfjnz8252375xbb117nzdcsaqv-home-manager-files/.config/fish/config.fish

@@ -12,6 +12,7 @@
   # programs.niri.enable = true;
 
   programs.dconf.enable = true;
+  programs.niri.enable = true;
   programs.fish.enable = true;
   programs.xwayland.enable = true;  
   programs.git.enable = true;
@@ -63,11 +64,13 @@
      xwayland-satellite
      btop
      tree
+     wev
+     keyd
 
      # = Gaming = 
      protonup-qt   
      protontricks    
-     gamemode                                                                                  │     unzip
+     gamemode                                                                                       
      prismlauncher     
 
      # = Theming = 
@@ -91,12 +94,29 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true; 
   services.openssh.enable = true;
+
+  # keyd rebind for gamedia keyboard
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            leftalt = "leftmeta";
+            leftmeta = "leftalt";
+          };
+        };
+      };
+    };
+  };
+	
   
   # === Themeing === 
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;  
+#  services.xserver.enable = true;
+#  services.xserver.displayManager.gdm.enable = true;
+#  services.xserver.desktopManager.gnome.enable = true;  
 
   # === User ===
  

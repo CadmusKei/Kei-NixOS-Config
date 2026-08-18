@@ -1,0 +1,6 @@
+vim.keymap.set('n', '<leader>rj', function()
+  vim.cmd('write')
+  local file = vim.fn.expand('%:t')
+  local classname = vim.fn.expand('%:t:r')
+  vim.cmd('split | terminal javac ' .. file .. ' && java ' .. classname)
+end, { buffer = true, desc = 'Compile and run Java file' })
