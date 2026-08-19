@@ -105,6 +105,7 @@
           main = {
             leftalt = "leftmeta";
             leftmeta = "leftalt";
+            rightalt = "leftalt";
           };
         };
       };
