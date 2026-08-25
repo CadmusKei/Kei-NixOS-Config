@@ -40,7 +40,9 @@
      nautilus
      discord
      spotify-player
-     gnome-text-editor
+     gnome-text-editor   
+     firefox
+     blanket
     
      # = Essentials = 
      gnome-tweaks
