@@ -33,9 +33,13 @@
      jdk21
      jdt-language-server
      jetbrains.idea
-     python3          
-     python3Packages.pip 
-
+     (python3.withPackages (ps: with ps; [
+       pip
+       numpy
+       matplotlib
+       scipy
+     ]))
+   
      # = Applications = 
      nautilus
      discord
@@ -43,6 +47,8 @@
      gnome-text-editor   
      firefox
      blanket
+     libreoffice
+     typora
     
      # = Essentials = 
      gnome-tweaks
@@ -52,6 +58,8 @@
      nwg-displays
      networkmanagerapplet
      gcc
+     cmake
+     gnumake
      pavucontrol
      blueman
      wget
