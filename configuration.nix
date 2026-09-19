@@ -33,6 +33,7 @@
      jdk21
      jdt-language-server
      jetbrains.idea
+     antigravity-fhs
      (python3.withPackages (ps: with ps; [
        pip
        numpy
@@ -49,7 +50,10 @@
      blanket
      libreoffice
      typora
-    
+     zathura
+     cava 
+     decibels
+
      # = Essentials = 
      gnome-tweaks
      gnome-extension-manager
@@ -76,6 +80,8 @@
      tree
      wev
      keyd
+     hyprland
+
 
      # = Gaming = 
      protonup-qt   
@@ -84,9 +90,9 @@
      prismlauncher     
 
      # = Theming = 
+     awww
      fastfetch
      nwg-look
-     awww
      noctalia-shell
   ];
 
@@ -122,12 +128,6 @@
     };
   };
 	
-  
-  # === Themeing === 
-
-#  services.xserver.enable = true;
-#  services.xserver.displayManager.gdm.enable = true;
-#  services.xserver.desktopManager.gnome.enable = true;  
 
   # === User ===
  

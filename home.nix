@@ -41,6 +41,7 @@
     enable = true;
     interactiveShellInit = ''
       set -g fish_greeting
+      fetch
     '';
   };
 
@@ -63,6 +64,7 @@
 
   home.packages = [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.antigravity.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     pkgs.quickshell
   ];
 }
