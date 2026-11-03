@@ -1,9 +1,9 @@
 {
-  "scratchpadContent": "12.53333333",
+  "scratchpadContent": "Nix describes one value, be it number, sentence or an entire operating system. \n\nIn Nix doesnt care for variable declaration order. In `Let...In`\n\n     _   ___    _\n    +o\\  \\  \\  / \\\n    \\oo\\  \\  \\/  /\n  ,oo+oo+oo\\   ,/ +\\\n <oooooooooo\\  \\ /os;     Y88b Y88 ,e,            e88 88e    dP\"8\n     /``/    \\  ,oo/       Y88b Y8  \"   Y8b Y8Y  d888 888b  C8b Y\n,─~─'  /      \\,oooooo,   b Y88b Y 888   Y8b Y  C8888 8888D  Y8b\n\\__   ;s      /oo/sss>`   8b Y88b  888  e Y8b    Y888 888P  b Y8D\n  /  /so\\____/ss/____     88b Y88b 888 d8b Y8b    \"88 88\"   8edP\n `, / \\oo\\   ```     /\n  \\/ /sooo\\─~.  .─~─`\n    /so/\\oo\\  \\  \\\n    \\o/  \\s+\\  \\_/\n          ```",
   "panelWidth": 600,
   "panelHeight": 400,
   "fontSize": 14,
-  "cursorPosition": 11,
+  "cursorPosition": 144,
   "scrollPositionX": 0,
   "scrollPositionY": 0,
   "filePath": ""

@@ -7,16 +7,16 @@
       ./hardware-configuration.nix
     ];
 
-  # === Programs ===
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
-  # programs.niri.enable = true;
+  # === Programs ===
 
   programs.dconf.enable = true;
   programs.niri.enable = true;
   programs.fish.enable = true;
   programs.xwayland.enable = true;  
   programs.git.enable = true;
-  programs.steam.enable = true;
+#  programs.steam.enable = true;
   programs.gamemode.enable = true; 
   virtualisation.virtualbox.host.enable = true;
 
@@ -33,14 +33,18 @@
      jdk21
      jdt-language-server
      jetbrains.idea
-     antigravity-fhs
      (python3.withPackages (ps: with ps; [
        pip
        numpy
        matplotlib
        scipy
      ]))
-   
+     lazygit
+     nmap
+     rpi-imager   
+     gh
+     
+
      # = Applications = 
      nautilus
      discord
@@ -48,20 +52,21 @@
      gnome-text-editor   
      firefox
      blanket
-     libreoffice
      typora
-     zathura
-     cava 
+     cava
+     pomodoro 
      decibels
+     taskwarrior-tui
+     taskwarrior3    
+     cmatrix 
+     google-chrome    
 
      # = Essentials = 
-     gnome-tweaks
-     gnome-extension-manager
-     papirus-icon-theme
      ghostty
      nwg-displays
      networkmanagerapplet
      gcc
+     file
      cmake
      gnumake
      pavucontrol
@@ -80,15 +85,21 @@
      tree
      wev
      keyd
-     hyprland
-
+     gdu
+     powertop
+     sbctl 
+   
 
      # = Gaming = 
-     protonup-qt   
-     protontricks    
+ #    protonup-qt   
+ #    protontricks    
      gamemode                                                                                       
-     prismlauncher     
-
+     (pkgs.vitetris.overrideAttrs (old: {
+         hardeningDisable = (old.hardeningDisable or []) ++ [ "fortify" ];
+     }))
+     crawl
+     eden 
+     azahar 
      # = Theming = 
      awww
      fastfetch
@@ -110,6 +121,8 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true; 
   services.openssh.enable = true;
+  services.tailscale.enable = true;
+  services.cloudflare-warp.enable = true;
 
   # keyd rebind for gamedia keyboard
   services.keyd = {
@@ -194,10 +207,22 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # === Space Optimisation ===
+#  nix.gc = {
+#    automatic = true;
+#    dates = "daily";
+#    options = "--delete-older-than 3d";
+#  };
+  nix.optimise.automatic = true; # dedupes the store via hardlinks
+
   # === Network ===
 
   networking.networkmanager.enable = true;
   networking.hostName = "Trisium";
+  
+  networking.extraHosts = ''
+    100.94.156.62 pi
+  '';
 
   # === Drivers ===
 

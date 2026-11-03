@@ -15,9 +15,13 @@
       url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    notion-desktop = {
+      url = "github:heytcass/notion-mac-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, antigravity, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, zen-browser, antigravity, notion-desktop, ... }@inputs:
     let
       system = "x86_64-linux";
     in

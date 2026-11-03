@@ -163,8 +163,8 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         off
-        width 5
-        active-color "rgba(127, 0, 255, 0.3)"
+        width 3
+        active-color "rgba(210, 210, 210, 0.5)"
         inactive-color "rgba(255, 255, 255, 0.1)"
     }
 
@@ -308,12 +308,29 @@ window-rule {
 }
 
 window-rule {
+    match app-id="antigravity"
+    opacity 0.85
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
     match app-id="jetbrains-idea"
     opacity 0.85
     background-effect {
         blur true
     }
 }
+
+window-rule {
+    match app-id="Typora"
+    opacity 0.85
+    background-effect {
+        blur true
+    }
+}
+
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -340,6 +357,7 @@ window-rule {
 window-rule {
     match app-id="com.mitchellh.ghostty"
     geometry-corner-radius 15
+    draw-border-with-background false
     clip-to-geometry true
     background-effect {
         blur true
@@ -403,8 +421,10 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal:  ghostty" { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+E hotkey-overlay-title="Run an Applcation: Yazi" { spawn "ghostty" "-e" "yazi"; }
+    Mod+D hotkey-overlay-title="Launcher" {
+      spawn-sh "noctalia-shell ipc call launcher toggle";
+    }
+    Mod+E hotkey-overlay-title="Run an Applcation: files" { spawn "nautilus"; }
     Mod+Z hotkey-overlay-title="Run an Applcation: browser" { spawn "zen"; }
     Mod+Alt+I hotkey-overlay-title="Run an Applcation: Idea" { spawn "idea"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -674,5 +694,5 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
-include "./noctalia.kdl"
+
 

@@ -358,6 +358,19 @@
                         "showBackground": true,
                         "x": 860,
                         "y": 100
+                    },
+                    {
+                        "hideMode": "hidden",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1.8,
+                        "showAlbumArt": true,
+                        "showBackground": true,
+                        "showButtons": true,
+                        "showVisualizer": true,
+                        "visualizerType": "mirrored",
+                        "x": 580,
+                        "y": 820
                     }
                 ]
             }
@@ -693,10 +706,6 @@
             {
                 "enabled": true,
                 "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "niri"
             }
         ],
         "enableUserTheming": false
@@ -719,7 +728,7 @@
         "automationEnabled": false,
         "directory": "/home/kei/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
-        "enabled": true,
+        "enabled": false,
         "favorites": [
         ],
         "fillColor": "#000000",

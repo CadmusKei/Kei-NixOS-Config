@@ -2,7 +2,14 @@
 {
   home.stateVersion = "26.05";
 
-  gtk.enable = true;
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Yaru";
+      package = pkgs.yaru-theme;
+    };
+  };
+
   qt = {
     enable = true;
     platformTheme.name = lib.mkForce "gtk";
@@ -28,20 +35,10 @@
     };
   };
 
-  programs.kitty = {
-    enable = true;
-    extraConfig = ''
-      window_padding_width 25
-      hide_window_decorations yes
-      confirm_os_window_close 0
-    '';
-  };
-
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
       set -g fish_greeting
-      fetch
     '';
   };
 
@@ -51,20 +48,19 @@
   };
 
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      icon-theme = "Yaru";
+    };
     "org/gnome/desktop/wm/keybindings" = {
       close = [ "<Super>q" ];
-    };
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/wm/keybindings" = {
-    toggle-fullscreen = [ "<Super>f" ];
+      toggle-fullscreen = [ "<Super>f" ];
     };
   };
 
   home.packages = [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
+    inputs.notion-desktop.packages.${pkgs.stdenv.hostPlatform.system}.default
     pkgs.quickshell
   ];
 }
