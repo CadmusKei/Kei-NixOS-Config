@@ -36,14 +36,18 @@
      (python3.withPackages (ps: with ps; [
        pip
        numpy
-       matplotlib
-       scipy
+
+       # == backend == 
+       fastapi
+       pydantic
+       uvicorn
+       sqlalchemy
      ]))
      lazygit
      nmap
      rpi-imager   
      gh
-     
+     postman          
 
      # = Applications = 
      nautilus
